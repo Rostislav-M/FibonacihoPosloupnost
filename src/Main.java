@@ -9,7 +9,7 @@ public class Main {
         int n=0;
         boolean choice =false;
 
-        Scanner scanner = new Scanner(System.in); // Vytvoření Scanneru na začátku
+        Scanner scanner = new Scanner(System.in);
 
         while (!choice) {
             System.out.println("Zadej čislo: ");
@@ -17,24 +17,24 @@ public class Main {
             System.out.println("Fibonaciho posloupnost: ");
             fibonaci(fn, zadanecislo, fn_1, fn_2, n);
 
-            // Ošetření vstupu pro y/n
+
             String moznost;
             do {
                 System.out.println("Chces znovu zadat zadanecislo a zobrazit fibonaciho posloupnost ano ne? (y/n): ");
-                moznost = scanner.next(); // Použijte next() místo nextLine()
+                moznost = scanner.next();
                 if (moznost.equals("y")) {
-                    choice = false; // Pokračovat v cyklu
-                    break; // Ukončit do-while cyklus
+                    choice = false;
+                    break;
                 } else if (moznost.equals("n")) {
-                    choice = true; // Ukončit program
-                    break; // Ukončit do-while cyklus
+                    choice = true;
+                    break;
                 } else {
-                    System.out.println("Neplatna moznost zadej y/n: "); // Chybová hláška pro neplatný vstup
+                    System.out.println("Neplatna moznost zadej y/n: ");
                 }
-            } while (true); // Neustále se ptá, dokud nebude zadán platný vstup
+            } while (true);
         }
 
-        scanner.close(); // Uzavření scanneru
+        scanner.close();
     }
 
     private static void fibonaci(int fn, int zadanecislo, int fn_1, int fn_2, int n) {
